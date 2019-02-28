@@ -7,15 +7,4 @@
   </li>
 </ul>
 
-<div *ngIf="selectedLink">
-  <h2>{{selectedLink.description | uppercase}}</h2>
-  <div><span>id: </span>{{selectedLink.id}}</div>
-  <div>
-    <label>description:
-      <input [(ngModel)]="selectedLink.description" placeholder="description">
-    </label>
-    <label>url:
-      <input [(ngModel)]="selectedLink.url" placeholder="url">
-    </label>
-  </div>
-</div>
+<app-link-detail [link]="selectedLink"></app-link-detail>

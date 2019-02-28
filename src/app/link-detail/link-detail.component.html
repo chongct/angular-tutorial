@@ -1,0 +1,12 @@
+<div *ngIf="link">
+  <h2>{{link.description | uppercase}}</h2>
+  <div><span>id: </span>{{link.id}}</div>
+  <div>
+    <label>description:
+      <input [(ngModel)]="link.description" placeholder="description">
+    </label>
+    <label>url:
+      <input [(ngModel)]="link.url" placeholder="url">
+    </label>
+  </div>
+</div>

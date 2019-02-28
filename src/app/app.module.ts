@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LinksComponent } from './links/links.component';
+import { LinkDetailComponent } from './link-detail/link-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LinksComponent
+    LinksComponent,
+    LinkDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
