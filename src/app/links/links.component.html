@@ -1,0 +1,21 @@
+<h2>My Links</h2>
+<ul class="links">
+  <li *ngFor="let link of links"
+    [class.selected]="link === selectedLink"
+    (click)="onSelect(link)">
+    <span class="badge">{{link.id}}</span> {{link.description}}
+  </li>
+</ul>
+
+<div *ngIf="selectedLink">
+  <h2>{{selectedLink.description | uppercase}}</h2>
+  <div><span>id: </span>{{selectedLink.id}}</div>
+  <div>
+    <label>description:
+      <input [(ngModel)]="selectedLink.description" placeholder="description">
+    </label>
+    <label>url:
+      <input [(ngModel)]="selectedLink.url" placeholder="url">
+    </label>
+  </div>
+</div>
