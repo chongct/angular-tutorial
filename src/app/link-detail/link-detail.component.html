@@ -6,7 +6,9 @@
       <input [(ngModel)]="link.description" placeholder="description">
     </label>
     <label>url:
-      <input [(ngModel)]="link.url" placeholder="url">
+      <input [(ngModel)]="link.url" placeholder="url" class="url">
     </label>
   </div>
+
+  <button (click)="goBack()">go back</button>
 </div>

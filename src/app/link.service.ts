@@ -15,4 +15,9 @@ export class LinkService {
     this.messageService.add('LinkService: fetched links');
     return of(LINKS);
   }
+
+  getLink(id: number): Observable<Link> {
+    this.messageService.add(`LinkService: fetched link id=${id}`);
+    return of(LINKS.find(link => link.id === id));
+  }
 }

@@ -1,5 +1,11 @@
 <h1>{{ title }}</h1>
-<app-links></app-links>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/links">Links</a>
+</nav>
+
+<!-- <app-links></app-links> -->
+<router-outlet></router-outlet>
 <app-messages></app-messages>
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- <div style="text-align:center">

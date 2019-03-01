@@ -1,10 +1,13 @@
 <h2>My Links</h2>
 <ul class="links">
-  <li *ngFor="let link of links"
+  <!-- <li *ngFor="let link of links"
     [class.selected]="link === selectedLink"
-    (click)="onSelect(link)">
-    <span class="badge">{{link.id}}</span> {{link.description}}
+    (click)="onSelect(link)"> -->
+  <li *ngFor="let link of links">
+    <a routerLink="/detail/{{link.id}}">
+      <span class="badge">{{link.id}}</span> {{link.description}}
+    </a>
   </li>
 </ul>
 
-<app-link-detail [link]="selectedLink"></app-link-detail>
+<!-- <app-link-detail [link]="selectedLink"></app-link-detail> -->

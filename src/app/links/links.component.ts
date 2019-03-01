@@ -11,14 +11,14 @@ import { LinkService } from '../link.service';
 export class LinksComponent implements OnInit {
 
   // link = "Angular resource";
-  link: Link = {
-    id: 1,
-    description: "Angular",
-    url: "https://angular.io/guide/quickstart"
-  };
+  // link: Link = {
+  //   id: 1,
+  //   description: "Angular",
+  //   url: "https://angular.io/guide/quickstart"
+  // };
 
   // links = LINKS;
-  selectedLink: Link;
+  // selectedLink: Link;
   links: Link[];
 
   constructor(private linkService: LinkService) { }
@@ -27,9 +27,9 @@ export class LinksComponent implements OnInit {
     this.getLinks();
   }
 
-  onSelect(link: Link): void {
-    this.selectedLink = link;
-  }
+  // onSelect(link: Link): void {
+  //   this.selectedLink = link;
+  // }
 
   getLinks(): void {
     // this.links = this.linkService.getLinks();

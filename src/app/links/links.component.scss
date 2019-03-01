@@ -46,6 +46,18 @@
     background-color: #BBD8DC !important;
     color: white;
   }
+
+  a {
+    color: #888;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 250px;
+
+    &:hover {
+      color: #607D8B;
+    }
+  }
 }
 
 .selected {
