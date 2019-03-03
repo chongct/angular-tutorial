@@ -30,11 +30,16 @@ export class LinkDetailComponent implements OnInit {
 
   getLink(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    // console.log(this.route.snapshot.paramMap);
+    // console.log(this.route.snapshot.paramMap.get);
     this.linkService.getLink(id).subscribe(link => this.link = link);
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    this.linkService.updateLink(this.link)
+      .subscribe(() => this.goBack());
   }
 }

@@ -36,4 +36,17 @@ export class LinksComponent implements OnInit {
     this.linkService.getLinks().subscribe(links => this.links = links);
   }
 
+  add(description: string): void {
+    description = description.trim();
+    if (!description) {
+      return;
+    }
+    this.linkService.addLink({ description } as Link)
+      .subscribe(link => this.links.push(link));
+  }
+
+  delete(link: Link): void {
+    this.links = this.links.filter(h => h !== link);
+    this.linkService.deleteLink(link).subscribe();
+  }
 }

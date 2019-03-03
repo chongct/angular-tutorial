@@ -64,3 +64,25 @@
   background-color: #CFD8DC !important;
   color: white;
 }
+
+button {
+  background-color: #EEE;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+
+  &:hover {
+    background-color: #CFD8DC;
+  }
+
+  &.delete {
+    position: relative;
+    left: 194px;
+    top: -32px;
+    background-color: gray !important;
+    color: white;
+  }
+}
