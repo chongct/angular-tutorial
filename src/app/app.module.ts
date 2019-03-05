@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { InMemoryDataService } from './in-memory-data.service';
+import { LinkSearchComponent } from './link-search/link-search.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     LinksComponent,
     LinkDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    LinkSearchComponent
   ],
   imports: [
     BrowserModule,

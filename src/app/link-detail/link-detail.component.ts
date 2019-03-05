@@ -1,5 +1,5 @@
-// import { Component, OnInit, Input } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+// import { Component, OnInit } from '@angular/core';
 import { Link } from '../link';
 
 import { ActivatedRoute } from '@angular/router';
@@ -14,7 +14,8 @@ import { LinkService } from '../link.service';
   styleUrls: ['./link-detail.component.scss']
 })
 export class LinkDetailComponent implements OnInit {
-  link: Link;
+  // link: Link;
+  @Input() link: Link;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,8 +26,6 @@ export class LinkDetailComponent implements OnInit {
   ngOnInit(): void {
     this.getLink();
   }
-
-  // @Input() link: Link;
 
   getLink(): void {
     const id = +this.route.snapshot.paramMap.get('id');
